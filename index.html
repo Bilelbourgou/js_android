@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>android </title>
+</head>
+<body>
+    <section id="android">
+        <span id="close"> &times; </span>
+        <img src="logo.png" alt="">
+        <span id="titels">
+            <p id="title"> FREE APP</p>
+            <p id="subtitle">The best free app</p>
+        </span>
+        <button id="download_button" type="button"> DOWNLOAD NOW </button>
+    </section>
+    <script> 
+        let close_button = document.getElementById("close");
+        let download_button = document.getElementById("download_button");
+        let section_android = document.getElementById("android");
+        let user_device = navigator.userAgent.toLocaleLowerCase();
+        if(user_device.includes("android")){
+            setTimeout(()=>{
+                section_android.style.display = "flex"; 
+            },1*1000);
+        }else{
+            section_android.style.display = "none";
+
+        };
+        download_button.addEventListener("click", ()=> {
+            window.open("https://play.google.com/store/apps","_blank");
+        });
+        close_button.addEventListener("click",()=>{
+            android.style.display = "none"
+        });
+    </script>
+</body>
+</html>
